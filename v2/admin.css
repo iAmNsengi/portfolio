@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
+
+:root {
+  --primary-color: #18c9f0;
+  --secondary-color: #05060d;
+  --white-color: #ffffff;
+}
+body {
+  background-color: var(--secondary-color);
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 30px;
+  }
+}
+/* progress container */
+.progress-container {
+  position: fixed;
+  width: 100%;
+  height: 2.5px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 2.5px;
+  background: orange;
+  width: 0%;
+  z-index: 999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.15s ease;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.header {
+  border-bottom: 1px solid var(--primary-color);
+  background-color: var(--secondary-color);
+  width: 100%;
+  background-color: #05060d;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  border-bottom: 1px solid #18c9f0;
+}
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--primary-color);
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+.nav-item button {
+  padding: 8px 15px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+.nav-item:last-child button:hover {
+  background: none;
+  color: var(--white-color);
+}
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--white-color);
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+  font-weight: 800;
+}
+
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+@media only screen and (max-width: 980px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 2px, 0, 0.05);
+    z-index: 997;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-link {
+    color: var(--white-color);
+    font-weight: 800;
+  }
+  .nav-item {
+    margin: 2rem 0;
+  }
+}
+
+/* back to top */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  opacity: 0.6;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+#myBtn:hover {
+  background-color: orange;
+}
+
+main {
+  width: 100%;
+  margin-top: 70px;
+}
+.navigation {
+  width: 90%;
+  margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-between;
+}
+.left-navbar {
+  position: fixed;
+  height: 80vh;
+  background: none;
+  width: 3vw;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #18c9f0;
+}
+.left-navbar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.left-navbar ul li {
+  padding: 5px;
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 1px solid #18c9f0;
+}
+.left-navbar ul li i {
+  align-self: center;
+}
+.left-navbar ul li:hover {
+  transform: scale(1.2);
+}
+.left-navbar ul li i {
+  color: #18c9f0;
+}
+.left-navbar ul .logout {
+  border: 1px solid red;
+}
+.left-navbar ul .logout i {
+  color: red;
+}
+
+/* footer */
+
+footer {
+  background-color: black;
+  padding: 20px;
+  width: 100%;
+  margin-top: 10px;
+}
+footer p {
+  text-align: center;
+  font-size: calc(10px + 6 * ((100vw - 480px) / 980));
+  color: var(--white-color);
+}
+
+/* unknown css */
