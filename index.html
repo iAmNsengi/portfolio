@@ -4,40 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./src/dumb_face.png" type="image/x-icon">
     <link rel="stylesheet" href="./index.css">
-    <script src="./index.js"></script>
+    <link rel="stylesheet" href="responsive.css">
     <title>iAmNsengi</title>
   </head>
   <body>
-    <div class="nav-container">
-
-      <nav class=" flex justify-between">
-        <div class="brand ml-3">
-          <h3 class="text-primary fw-900">I_AM_NSENGI</h3>
-      </div>
-      <ul class="nav-items  flex justify-between mr-3">
-        <li><a href="#intro"><i class="fa fa-home"></i> HOME</a></li>
-        <li><a href="#about-me"><i class="fa fa-info"></i> ABOUT</a></li>
-        <li><a href="#portfolio"><i class="fa fa-briefcase"></i> PORTFOLIO</a></li>
-        <li><a href="#my-blog"><i class="fa fa-pencil"></i> MY BLOG</a></li>
-        <li><a href="#contact-me"><i class="fa fa-address-book"></i> CONTACT</a></li>
-        <button class="btn btn-primary fw-600"><i class="fa fa-sign-in"></i> SIGN UP</button>
-      </ul>
-    </nav>
+    <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
   </div>
-    <section class="container intro" id="intro">
-      <div class="row">
-        <div class="col my-intro">
-          <p class="small-text mt-3 ">Hello I am</p>
-          <p class="title mt-3">
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="nav-logo">iAmNsengi.</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">PORTFOLIO</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">MY BLOG</a>
+                </li>
+                 <li class="nav-item">
+                    <a href="#" class="nav-link">CONTACT</a>
+                </li>
+                <li class="nav-item">
+ <button class="btn btn-primary fw-600"><i class="fa fa-envelope"></i> HIRE ME</button>
+                </li>
+                 
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+</header>
+<!-- bubbles -->
+  <div class="bubble bubble--1"></div>
+  <div class="bubble bubble--2"></div>
+  <div class="bubble bubble--3"></div>
+  <div class="bubble bubble--4"></div>
+  <div class="bubble bubble--5"></div>
+  <div class="bubble bubble--6"></div>
+  <div class="bubble bubble--7"></div>
+  <div class="bubble bubble--8"></div>
+  <div class="bubble bubble--9"></div>
+  <div class="bubble bubble--10"></div>
+  <div class="bubble bubble--11"></div>
+  <div class="bubble bubble--12"></div>
+<!-- end of bubbles -->
+
+<!-- intro section -->
+ <section class="intro" id="intro">
+      <div class="intro-content">
+        <div class="right-side">
+          <p class="small-text mt-3 ">Hello, </p>
+          <p class="title mt-3">I am
             Elie<span class="text-primary">zer</span>&nbsp;NSE<span class="text-primary">NGI</span>
-            <p class="mt-3">I am a <span class="text-primary fw-700">Python Developer</span></p>
-            <p class="small-text mt-3">a Python developer skilled in crafting efficient and scalable solutions. With a focus on clean code and problem-solving, I bring expertise in diverse domains, from web development to automation and data analysis. My commitment to continuous learning keeps me at the forefront of Python's dynamic landscape. Let's explore the possibilities where code meets creativity </p>
+            <p>an Intermediate <span class="whoAmI">|</span></p>
+            <p >am a Python developer skilled in crafting efficient and scalable solutions. With a focus on clean code and problem-solving, I bring expertise in diverse domains, from web development to automation and data analysis. My commitment to continuous learning keeps me at the forefront of Python's dynamic landscape. Let's explore the possibilities where code meets creativity </p>
           </p>
           <button class="btn btn-primary fw-800 mt-3 download-cv"> <i class="fa fa-download"></i> DOWNLOAD MY CV</button>
         </div>
-        <div class="col my-image">
-            <div class="dumb-face-container">
+        <div class="left-side">
+            <div class="img-container">
                 <img src="./src/dumb_face.png" alt="my_dumb_face" id="mask">
     </div>
             <div class="social-icons"> 
@@ -50,23 +85,27 @@
         </div>
       </div>
     </section>
+    <!-- intro ends here -->
+    
+
+    <!-- about me starts here -->
     <!-- about me -->
     <section class="about-me fade-in" id="about-me">
-        <div class="row flex justify-center ">
-            <div class="col about-me-sect1">
-                 <div class="dumb-face-container-2">
+        <div class="about-container ">
+            <div class="left-side">
+                 <div class="img-container">
                 <img src="./src/dumb_face.png" alt="my_dumb_face" id="mask">
     </div>
-        <button class="btn btn-primary fw-800 mt-3 download-cv"> <i class="fa fa-download"></i> DOWNLOAD MY CV</button>
+        <button class="download-cv"> <i class="fa fa-download"></i> DOWNLOAD MY CV</button>
             </div>
-            <div class="col about-me-sect2">
-                <h2>ABOUT <span class="text-primary">ME</span></h2>
-                <p class="small-text">
+            <div class="right-side">
+                <h2 class="section-title">ABOUT <span class="text-primary">ME</span></h2>
+                <p >
                     Born October-2001;
 Holder of a Bachelor’s Degree in Computer Sciences;
 Passionate about  Python Development and  ready to work under pressure, enjoys learning new tech stuffs.
                 </p>
-                <h2 class="skill-title">SKI<span class="text-primary">LLS</span></h2>
+                <h2 class="section-title">SKI<span class="text-primary">LLS</span></h2>
                 <div class="skills-container">
 
                   <div class="skill">
@@ -95,10 +134,15 @@ Passionate about  Python Development and  ready to work under pressure, enjoys l
             </div>
           </div>
     </section>
+    <!-- about -m e ends here -->
+
+
     <section class="recent-projects fade-in container" id="portfolio">
-<h1 class="title mt-3 section-title">RECENT <span class="text-primary">PROJECTS</span></h1>
-<h4 class="mt-3">I recently had time to work on the following projects</h4>
-<div class="arrow"><a href="#projects-container"><svg xmlns="http://www.w3.org/2000/svg" width="215" height="145" viewBox="0 0 215 145" fill="none">
+      <div class="recent-projects-container">
+
+        <h1 class="title mt-3 section-title">RECENT <span class="text-primary">PROJECTS</span></h1>
+        <h4 class="mt-3">I recently had time to work on the following projects</h4>
+        <div class="arrow"><a href="#projects-container"><svg xmlns="http://www.w3.org/2000/svg" width="215" height="145" viewBox="0 0 215 145" fill="none">
   <path d="M26.8167 22.8941L21.8555 23.5162L21.3012 19.0948L25.6298 18.0371L26.8167 22.8941ZM45.4479 143.068C43.7534 145.249 40.6122 145.642 38.4318 143.948L2.90047 116.334C0.720091 114.64 0.326231 111.498 2.02076 109.318C3.71528 107.138 6.85651 106.744 9.03689 108.438L40.6203 132.984L65.1659 101.4C66.8605 99.2201 70.0017 98.8262 72.1821 100.521C74.3624 102.215 74.7563 105.357 73.0618 107.537L45.4479 143.068ZM98.0001 5.50006L96.8132 0.642964L98.4535 0.242141L100.001 0.917894L98.0001 5.50006ZM31.7779 22.2721L46.4611 139.378L36.5388 140.622L21.8555 23.5162L31.7779 22.2721ZM210.499 60.0822L95.9991 10.0822L100.001 0.917894L214.501 50.9178L210.499 60.0822ZM99.1869 10.3572L28.0036 27.7512L25.6298 18.0371L96.8132 0.642964L99.1869 10.3572Z" fill="#18C9F0"/>
 </svg></a></div>
 <div class="projects-container row justify-between mt-3" id="projects-container">
@@ -118,11 +162,13 @@ Passionate about  Python Development and  ready to work under pressure, enjoys l
     <p class="small-text">ONLINE STORE  </p>
   </div>
 </div>
-    </section>
+</div>
+</section>
+   <section class="my-blog fade-in" id="my-blog">
+  <div class="blog-container">
 
-    <section class="my-blog fade-in container mt-3" id="my-blog">
-<h1 class="title section-title">MY BL<span class="text-primary">OG</span></h1>
-<div class="slideshow-container">
+    <h1 class="section-title">MY BL<span class="text-primary">OG</span></h1>
+    <div class="slideshow-container">
 
 <div class="mySlides fade is-active">
     <div class="slide">
@@ -147,9 +193,9 @@ Passionate about  Python Development and  ready to work under pressure, enjoys l
     <img src="src/img3.jpg" >
     <div class="text">How To MAke Money Online</div>
   </div>
-  </div>
+</div>
 <div class="mySlides fade">
-    <div class="slide">
+  <div class="slide">
     <img src="src/img2.png" >
     <div class="text">How To MAke Money Online</div>
   </div><div class="slide">
@@ -181,26 +227,37 @@ Passionate about  Python Development and  ready to work under pressure, enjoys l
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
 </div>
-    </section>
-    <section class="contact-me fade-in  container" id="contact-me">
-      <h1 class="title section-title">CONTACT <span class="text-primary">ME</span></h1>
+</div>
+</section>
+    <!-- blog ends here -->
+   
+    <!-- contact starts here -->
+     <section class="contact-me fade-in" id="contact-me">
+      <div class="contact-container">
+
+        <h1 class="title section-title">CONTACT <span class="text-primary">ME</span></h1>
       <div class="form-container">
-        <form method="POST" class="row">
-          <div class="left">
-            <input type="text" placeholder="full name..."><br>
-            <input type="text" placeholder="email..."><br>
-            <input type="text" placeholder="phone number..."><br>
-          </div>
-          <div class="right">
-<textarea name="" id="" cols="40" rows="8" placeholder="Your Message..."></textarea>
+        <form action="#" id="contact-form">
+            <input type="text" oninput="validateInput(this)" placeholder="full name..." id="contact-name" name="contact-name"><br>
+            <input type="text" placeholder="email..." id="contact-email" name="contact-email" oninput="validateEmail(this)"><br>
+            <input type="text" placeholder="phone number..." id="contact-phone" oninput="validateInput(this)" name="contact-phone"><br>
+<textarea  oninput="validateInput(this)" cols="40" rows="8" placeholder="Your Message..." name="contact_message" id="contact-message"></textarea>
 <button class="btn btn-primary"><i class="fa fa-send"></i> SEND MESSAGE</button>
-          </div>
+</div>
         </form>
       </div>
     </section>
+    <!-- contact ends here -->
 
-    <footer>
+<!-- back to top -->
+   <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fa fa-arrow-up"></i></button>
+    <!-- footer -->
+     <footer>
       <p>All Rights Reserved. Eliezer Nsengi &copy;, 2024</p>
     </footer>
+    <script src="./index.js"></script>
+    <script src="./form-validation.js"></script>
+
+
   </body>
 </html>
