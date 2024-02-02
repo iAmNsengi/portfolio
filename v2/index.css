@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
 
-<<<<<<< Updated upstream
-=======
 :root {
   --primary-color: #18c9f0;
   --secondary-color: #05060d;
@@ -37,7 +35,6 @@ body {
   z-index: 999;
 }
 
->>>>>>> Stashed changes
 * {
   margin: 0;
   padding: 0;
@@ -171,8 +168,6 @@ a {
   margin: 0 auto;
   display: flex;
 }
-<<<<<<< Updated upstream
-=======
 /* projects ends here */
 
 /* blog starts here */
@@ -414,4 +409,3 @@ footer p {
 
   color: var(--white-color);
 }
->>>>>>> Stashed changes
