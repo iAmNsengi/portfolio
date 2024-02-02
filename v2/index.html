@@ -4,32 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./src/dumb_face.png" type="image/x-icon">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="responsive.css">
     <title>iAmNsengi</title>
   </head>
   <body>
+    <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
     <header class="header">
         <nav class="navbar">
             <a href="#home" class="nav-logo">iAmNsengi.</a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#intro" title="Home" class="nav-link">HOME</a>
+                    <a href="#" class="nav-link">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about-me" title="About"class="nav-link">ABOUT</a>
+                    <a href="#" class="nav-link">ABOUT</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#portfolio" title="Portfolio" class="nav-link">PORTFOLIO</a>
+                    <a href="#" class="nav-link">PORTFOLIO</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#my-blog" title="My Blog" class="nav-link">MY BLOG</a>
+                    <a href="#" class="nav-link">MY BLOG</a>
                 </li>
                  <li class="nav-item">
-                    <a href="#contact-me" title="Contact Me" class="nav-link">CONTACT</a>
+                    <a href="#" class="nav-link">CONTACT</a>
                 </li>
                 <li class="nav-item">
- <button class="btn btn-primary fw-600" title="Hire Me"><i class="fa fa-envelope"></i> HIRE ME</button>
+ <button class="btn btn-primary fw-600"><i class="fa fa-envelope"></i> HIRE ME</button>
                 </li>
                  
             </ul>
@@ -40,20 +44,35 @@
             </div>
         </nav>
 </header>
+<!-- bubbles -->
+  <div class="bubble bubble--1"></div>
+  <div class="bubble bubble--2"></div>
+  <div class="bubble bubble--3"></div>
+  <div class="bubble bubble--4"></div>
+  <div class="bubble bubble--5"></div>
+  <div class="bubble bubble--6"></div>
+  <div class="bubble bubble--7"></div>
+  <div class="bubble bubble--8"></div>
+  <div class="bubble bubble--9"></div>
+  <div class="bubble bubble--10"></div>
+  <div class="bubble bubble--11"></div>
+  <div class="bubble bubble--12"></div>
+<!-- end of bubbles -->
+
 <!-- intro section -->
  <section class="intro" id="intro">
       <div class="intro-content">
-        <div class="col my-intro">
-          <p class="small-text mt-3 ">Hello I am</p>
-          <p class="title mt-3">
+        <div class="right-side">
+          <p class="small-text mt-3 ">Hello, </p>
+          <p class="title mt-3">I am
             Elie<span class="text-primary">zer</span>&nbsp;NSE<span class="text-primary">NGI</span>
-            <p class="mt-3">I am a <span class="text-primary fw-700">Python Developer</span></p>
-            <p class="small-text mt-3">a Python developer skilled in crafting efficient and scalable solutions. With a focus on clean code and problem-solving, I bring expertise in diverse domains, from web development to automation and data analysis. My commitment to continuous learning keeps me at the forefront of Python's dynamic landscape. Let's explore the possibilities where code meets creativity </p>
+            <p>an Intermediate <span class="whoAmI">|</span></p>
+            <p >am a Python developer skilled in crafting efficient and scalable solutions. With a focus on clean code and problem-solving, I bring expertise in diverse domains, from web development to automation and data analysis. My commitment to continuous learning keeps me at the forefront of Python's dynamic landscape. Let's explore the possibilities where code meets creativity </p>
           </p>
           <button class="btn btn-primary fw-800 mt-3 download-cv"> <i class="fa fa-download"></i> DOWNLOAD MY CV</button>
         </div>
-        <div class="col my-image">
-            <div class="dumb-face-container">
+        <div class="left-side">
+            <div class="img-container">
                 <img src="./src/dumb_face.png" alt="my_dumb_face" id="mask">
     </div>
             <div class="social-icons"> 
@@ -117,7 +136,7 @@ Passionate about  Python Development and  ready to work under pressure, enjoys l
     </section>
     <!-- about -m e ends here -->
 
-<!--  recent projects starts here  -->
+
     <section class="recent-projects fade-in container" id="portfolio">
       <div class="recent-projects-container">
 
@@ -144,10 +163,8 @@ Passionate about  Python Development and  ready to work under pressure, enjoys l
   </div>
 </div>
 </div>
-</section> 
-  <!-- recent projects ends here  -->
-
- <section class="my-blog fade-in" id="my-blog">
+</section>
+   <section class="my-blog fade-in" id="my-blog">
   <div class="blog-container">
 
     <h1 class="section-title">MY BL<span class="text-primary">OG</span></h1>
@@ -240,6 +257,7 @@ Passionate about  Python Development and  ready to work under pressure, enjoys l
     </footer>
     <script src="./index.js"></script>
     <script src="./form-validation.js"></script>
+
 
   </body>
 </html>
