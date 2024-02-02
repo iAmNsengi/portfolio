@@ -4,7 +4,7 @@ let contact_email = document.getElementById("contact-email");
 let contact_phone = document.getElementById("contact-phone");
 let contact_message = document.getElementById("contact-message");
 var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-let containsError = false;
+let containsError = true;
 
 function validateInput(x) {
   if (x.value == "") {
@@ -61,10 +61,9 @@ contact_form.addEventListener("submit", (e) => {
       },
     ];
 
-    var existingData = localStorage.getItem("arr-messages");
     var dataArray = [];
-    if (existingData) {
-      dataArray = existingData;
+    if (all_messages) {
+      dataArray = all_messages;
     }
     dataArray.push(newObject);
     localStorage.setItem("arr-messages", JSON.stringify(dataArray));

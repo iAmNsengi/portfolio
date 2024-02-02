@@ -7,42 +7,47 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="shortcut icon" href="./src/dumb_face.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="post.css" />
-    <link rel="stylesheet" href="responsive.css" />
-    <script src="./index.js"></script>
-    <title>How To Make Money Online | iAmNsengi</title>
+    <title>iAmNsengi</title>
   </head>
   <body>
-    <div class="nav-container">
-      <nav class="flex justify-between">
-        <div class="brand ml-3">
-          <h3 class="text-primary fw-900">I_AM_NSENGI</h3>
-        </div>
-        <ul class="nav-items flex justify-between mr-3">
-          <li>
-            <a href="index.html"><i class="fa fa-home"></i> HOME</a>
-          </li>
-          <li>
-            <a href="#about-me"><i class="fa fa-info"></i> ABOUT</a>
-          </li>
-          <li>
-            <a href="#portfolio"><i class="fa fa-briefcase"></i> PORTFOLIO</a>
-          </li>
-          <li class="text-primary">
-            <a href="#my-blog" class="text-primary"
-              ><i class="fa fa-pencil text-primary"></i> MY BLOG</a
-            >
-          </li>
-          <li>
-            <a href="#contact-me"><i class="fa fa-address-book"></i> CONTACT</a>
-          </li>
-          <button class="btn btn-primary fw-600">
-            <i class="fa fa-sign-in"></i> SIGN UP
-          </button>
-        </ul>
-      </nav>
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
     </div>
+    <header class="header">
+      <nav class="navbar">
+        <a href="/" class="nav-logo">iAmNsengi.</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="/" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about-me" class="nav-link">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a href="#portfolio" class="nav-link">PORTFOLIO</a>
+          </li>
+          <li class="nav-item">
+            <a href="#my-blog" class="nav-link">MY BLOG</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact-me" class="nav-link">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-primary fw-600">
+              <i class="fa fa-envelope"></i> HIRE ME
+            </button>
+          </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
 
     <section class="container mb-3 post">
       <div class="post-title">
@@ -98,14 +103,19 @@
       </div>
       <div class="comment">
         <h3 class="comment-title">Leave A Comment</h3>
-        <form action="#">
-          <input type="text" placeholder="email..." />
+        <form action="#" id="comment-form">
+          <input
+            type="text"
+            placeholder="email..."
+            id="comment-input-email"
+            oninput="validateEmail(this)"
+          />
           <textarea
-            name=""
-            id=""
             cols="30"
             rows="7"
             placeholder="Comment..."
+            id="comment-input-comment"
+            oninput="validateInput(this)"
           ></textarea>
           <button class="btn btn-primary">
             <i class="fa fa-send"></i> Send Comment
@@ -113,6 +123,8 @@
         </form>
       </div>
     </section>
+    <script t src="./src/blog.js"></script>
+    <!-- <script src="./index.js"></script> -->
     <footer>
       <p>All Rights Reserved. Eliezer Nsengi &copy;, 2024</p>
     </footer>
