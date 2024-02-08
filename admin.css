@@ -52,6 +52,9 @@ body {
 li {
   list-style: none;
 }
+input {
+  color: white !important;
+}
 
 a {
   text-decoration: none;
@@ -447,7 +450,7 @@ footer p {
   outline: none;
   border-radius: 10px;
 }
-.modal button{
+.modal button {
   margin: 5px;
 }
 .modal button:hover {

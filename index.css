@@ -19,6 +19,9 @@ body {
     font-size: 30px;
   }
 }
+input {
+  color: white !important;
+}
 /* progress container */
 .progress-container {
   position: fixed;
