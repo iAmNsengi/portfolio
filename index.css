@@ -550,7 +550,7 @@ chatbot-toggler span:last-child {
 
 /* chatbot responsiveness */
 
-@media only screen and (max-width: 490px) {
+@media only screen and (max-width: 600px) {
   .chatbot {
     right: 0;
     bottom: 0;
@@ -561,9 +561,10 @@ chatbot-toggler span:last-child {
   .chatbot .chatbox {
     height: 90%;
   }
+  /* }
   .chatbot-toggler {
     display: none;
-  }
+  } */
 }
 
 /* about-me section */
