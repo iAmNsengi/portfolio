@@ -4,7 +4,7 @@ const chatBox = document.querySelector(".chatbox");
 const chatBotToggler = document.querySelector(".chatbot-toggler");
 
 let userMessage;
-const API_KEY = "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";
+const API_KEY = "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";
 
 const createChatLi = (message, className) => {
   const chatLi = document.createElement("li");

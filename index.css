@@ -994,7 +994,6 @@ form button i {
   border: none;
   outline: none;
   background-color: var(--primary-color);
-  opacity: 0.6;
   color: white;
   cursor: pointer;
   padding: 15px;
