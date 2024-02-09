@@ -1,18 +1,20 @@
 const sendChatBtn = document.querySelector(".chat-input span");
 const chatInput = document.querySelector(".chat-input textarea");
 const chatBox = document.querySelector(".chatbox");
+const chatBotToggler = document.querySelector(".chatbot-toggler");
 
 let userMessage;
-const API_KEY = "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";
+const API_KEY = "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";
 
 const createChatLi = (message, className) => {
   const chatLi = document.createElement("li");
   chatLi.classList.add("chat", className);
   let chatContent =
     className === "outgoing"
-      ? `<p>${message}</p>`
-      : `<span class=""> <i class="fa fa-bug"></i></span> <p>${message}</p>`;
+      ? `<p></p>`
+      : `<span class=""> <i class="fa fa-bug"></i></span> <p></p>`;
   chatLi.innerHTML = chatContent;
+  chatLi.querySelector("p").textContent = message;
   return chatLi;
 };
 const generateResponse = (incomingChatLi) => {
@@ -37,8 +39,12 @@ const generateResponse = (incomingChatLi) => {
       messageElement.textContent = data.choices[0].message.content;
     })
     .catch((error) => {
+      console.log(error);
       messageElement.textContent =
         "Opps something Went Wrong Please try again Later!!";
+    })
+    .finally(() => {
+      chatBox.scrollTo(0, chatBox.scrollHeight);
     });
 };
 
@@ -46,15 +52,21 @@ const handleChat = () => {
   userMessage = chatInput.value.trim();
   if (!userMessage) return;
   console.log(userMessage);
+  chatInput.value = "";
 
   // gotta  append user's message to the chatbox
   chatBox.appendChild(createChatLi(userMessage, "outgoing"));
   createChatLi(userMessage, "outgoing");
+  chatBox.scrollTo(0, chatBox.scrollHeight);
   setTimeout(() => {
-    const incomingChatLi = createChatLi("Thinking...", "incoming");
+    const incomingChatLi = createChatLi("Wait...", "incoming");
     chatBox.appendChild(incomingChatLi);
     generateResponse(incomingChatLi);
+    chatBox.scrollTo(0, chatBox.scrollHeight);
   }, 600);
 };
 
+chatBotToggler.addEventListener("click", () => {
+  document.body.classList.toggle("show-chatbot");
+});
 sendChatBtn.addEventListener("click", handleChat);

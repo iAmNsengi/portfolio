@@ -485,7 +485,12 @@ chatbot-toggler span:last-child {
   border-radius: 10px 10px 0 10px;
   background-color: orange;
   max-width: 75%;
+  white-space: pre-wrap;
+  font-weight: 800;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 1.3rem;
+  line-height: 20px;
 }
 .chatbox .incoming span {
   height: 32px;
