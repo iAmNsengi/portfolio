@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="post.css" />
     <title>iAmNsengi</title>
   </head>
-  <body>
+  <body class="show-chatbot">
     <div class="progress-container">
       <div class="progress-bar" id="myBar"></div>
     </div>
@@ -90,6 +90,33 @@
       </div>
     </section>
     <!-- intro ends here -->
+    <button class="chatbot-toggler">
+          <span class=""> <i class="fa fa-comments"></i></span>
+          <span class=""> <i class="fa fa-close"></i></span>
+
+
+    </button>
+    <div class="chatbot">
+      <header>
+        <h2>
+          ChatBot
+        </h2>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class=""> <i class="fa fa-bug"></i></span>
+          <p>Hi there how can I help you today?</p>
+        </li>
+         <li class="chat outgoing">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, est?</p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." required></textarea>
+        <span id="send-btn" class="material-symbols-outlined"><i class="fa fa-send"></i></span>
+      </div>
+    </div>
     
 
     <!-- about me starts here -->
