@@ -4,7 +4,7 @@ const chatBox = document.querySelector(".chatbox");
 const chatBotToggler = document.querySelector(".chatbot-toggler");
 
 let userMessage;
-const API_KEY = "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";
+const API_KEY = "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";
 
 const createChatLi = (message, className) => {
   const chatLi = document.createElement("li");
@@ -35,7 +35,6 @@ const generateResponse = (incomingChatLi) => {
   fetch(API_URL, requestOptions)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       messageElement.textContent = data.choices[0].message.content;
     })
     .catch((error) => {
@@ -51,7 +50,6 @@ const generateResponse = (incomingChatLi) => {
 const handleChat = () => {
   userMessage = chatInput.value.trim();
   if (!userMessage) return;
-  console.log(userMessage);
   chatInput.value = "";
 
   // gotta  append user's message to the chatbox
