@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="./auth.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="./src/dumb_face.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./admin.css" />
+    <link rel="stylesheet" href="responsive.css" />
+
+    <title>iAmNsengi | Admin Panel</title>
+  </head>
+  <body>
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+    <header class="header">
+      <nav class="navbar">
+        <a href="#home" class="nav-logo">iAmNsengi.</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <button class="btn btn-primary fw-600" title="User">
+              <i class="fa fa-user"></i> &nbsp; admin
+            </button>
+          </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- intro section -->
+    <div class="navigation">
+      <nav class="left-navbar">
+        <ul>
+          <div class="top">
+            <li>
+              <a href="#section-1"><i class="fa fa-home" title="Home"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-home" title="Home"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-briefcase" title="Home"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-gear" title="Home"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-envelope" title="Messages"></i></a>
+            </li>
+          </div>
+          <li class="logout">
+            <a href="#"><i class="fa fa-sign-out" title="Home"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <div class="content">
+        <div class="dashboard">
+          <div class="card-container">
+            <div class="card">
+              <p class="title"><i class="fa fa-envelope"></i> 123 Messages</p>
+            </div>
+            <div class="card">
+              <p class="title"><i class="fa fa-sticky-note"></i> 13 Posts</p>
+            </div>
+            <div class="card">
+              <p class="title"><i class="fa fa-eye"></i> 19 Visis</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <section class="section-1">
+        <div class="section-container">
+          <h1 class="section-title">Landing <span>Page</span></h1>
+          <form method="POST" action="#" class="intro-form">
+            <div class="top">
+              <div class="form-control">
+                <h4>My Cv</h4>
+                <input type="file" name="" />
+              </div>
+              <div class="form-control">
+                <h4>My Image:</h4>
+                <div class="img-container">
+                  <input type="file" name="image-file" id="" />
+                </div>
+                <img src="./src/dumb_face.png" alt="" srcset="" />
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="form-control">
+                <h4>Intro Text</h4>
+                <textarea name="intro-text" id="">
+am a Python developer skilled in crafting efficient and scalable solutions. With a focus on clean code and problem-solving, I bring expertise in diverse domains, from web development to automation and data analysis. My commitment to continuous learning keeps me at the forefront of Python's dynamic landscape. Let's explore the possibilities where code meets creativity</textarea
+                >
+              </div>
+              <button class="update" type="submit">
+                <i class="fa fa-upload"></i> Update
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <hr />
+      <section id="section-2">
+        <div class="section-container">
+          <h1 class="section-title">About <span>Me</span></h1>
+          <form action="#" class="about-me">
+            <div class="form-control">
+              <textarea name="" id="" cols="30" rows="10">
+Born October-2001;
+Holder of a Bachelor’s Degree in Computer Sciences;
+Passionate about  Python Development and  ready to work under pressure, enjoys learning new tech stuffs.</textarea
+              >
+            </div>
+
+            <button class="update" type="submit">
+              <i class="fa fa-upload"></i> Update
+            </button>
+          </form>
+        </div>
+      </section>
+      <hr />
+      <section class="section-3">
+        <div class="section-container">
+          <h1 class="section-title">Recent Pro<span>jects</span></h1>
+          <form action="#" class="projects">
+            <div style="overflow-x: auto" class="table-container">
+              <table>
+                <tr>
+                  <th>No</th>
+                  <th>Project Name</th>
+                  <th>Project URL</th>
+                  <th>Project Image</th>
+                  <th>Action</th>
+                </tr>
+                <tr>
+                  <td>&nbsp</td>
+                  <td><input type="text" placeholder="project name...." /></td>
+                  <td><input type="url" placeholder="https:/example.com" /></td>
+                  <td><input type="file" name="" id="" /></td>
+                  <td>
+                    <button class="btn-add">
+                      <i class="fa fa-plus"></i> Add
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Online Store</td>
+                  <td><a href="#">https:/store.store.com</a></td>
+                  <td>
+                    <div class="img-container">
+                      <img src="./src/img1.jpg" alt="" srcset="" />
+                    </div>
+                  </td>
+                  <td>
+                    <button class="delete"><i class="fa fa-trash"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Online Store</td>
+                  <td><a href="#">https:/store.store.com</a></td>
+                  <td>
+                    <div class="img-container">
+                      <img src="./src/img1.jpg" alt="" srcset="" />
+                    </div>
+                  </td>
+                  <td>
+                    <button class="delete"><i class="fa fa-trash"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Online Store</td>
+                  <td><a href="#">https:/store.store.com</a></td>
+                  <td>
+                    <div class="img-container">
+                      <img src="./src/img1.jpg" alt="" srcset="" />
+                    </div>
+                  </td>
+                  <td>
+                    <button class="delete"><i class="fa fa-trash"></i></button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </form>
+        </div>
+      </section>
+      <hr />
+      <section class="section-4">
+        <div class="section-container">
+          <h1 class="section-title">My Bl<span>ogs</span></h1>
+          <fieldset>
+            <form action="#" class="add-blog">
+              <div class="form-control">
+                <h4>Post Title</h4>
+                <input type="text" id="post-title" />
+              </div>
+              <div class="form-control">
+                <h4>Post Content</h4>
+                <textarea
+                  name="postcontent"
+                  id="post-content"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+
+              <div class="form-control">
+                <h4>Image</h4>
+                <input type="file" name="" id="" />
+              </div>
+              <button class="update">
+                <i class="fa fa-save"> </i> Save Post
+              </button>
+            </form>
+          </fieldset>
+          <div style="overflow-x: auto" class="table-container">
+            <table>
+              <tr>
+                <th>No</th>
+                <th>Post Title</th>
+                <th>Post Content</th>
+                <th>Post Image</th>
+                <th>Action</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Online Store</td>
+                <td>
+                  <a href="#"
+                    >Making money online has become increasingly accessible with
+                    the evolution of...</a
+                  >
+                </td>
+                <td>
+                  <div class="img-container">
+                    <img src="./src/img1.jpg" alt="" srcset="" />
+                  </div>
+                </td>
+                <td>
+                  <button class="btn-add open-modal">
+                    <i class="fa fa-edit"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Online Store</td>
+                <td>
+                  <a href="#"
+                    >Making money online has become increasingly accessible with
+                    the evolution of...</a
+                  >
+                </td>
+                <td>
+                  <div class="img-container">
+                    <img src="./src/img1.jpg" alt="" srcset="" />
+                  </div>
+                </td>
+                <td>
+                  <button class="btn-add open-modal">
+                    <i class="fa fa-edit"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Online Store</td>
+                <td>
+                  <a href="#"
+                    >Making money online has become increasingly accessible with
+                    the evolution of...</a
+                  >
+                </td>
+                <td>
+                  <div class="img-container">
+                    <img src="./src/img1.jpg" alt="" srcset="" />
+                  </div>
+                </td>
+                <td>
+                  <button class="btn-add open-modal">
+                    <i class="fa fa-edit"></i>
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="modal" id="myModal">
+          <form action="#" class="add-blog modal-content">
+            <span class="close">&times;</span>
+            <div class="form-control">
+              <h4>Post Title</h4>
+              <input
+                type="text"
+                id="post-title"
+                value="How To Make Money Online"
+              />
+            </div>
+            <div class="form-control">
+              <h4>Post Content</h4>
+              <textarea
+                name="postcontent"
+                id="post-content"
+                cols="30"
+                rows="10"
+              >
+Making money online has become increasingly accessible with the
+          evolution of the digital landscape. One lucrative avenue is through
+          freelance work. Websites like Upwork, Fiverr, and Freelancer connect
+          skilled individuals with clients seeking services such as writing,
+          graphic design, programming, and more. By showcasing your expertise
+          and delivering quality work, you can build a solid reputation and
+          attract a steady stream of clients, allowing you to earn money on a
+          flexible Another avenue for online income is through creating and
+          selling digital products. If you possess a talent for graphic design,
+          you can design and sell custom illustrations, logos, or templates on
+          platforms like Etsy or Gumroad. Alternatively, if you have knowledge
+          in a particular field, consider creating and selling e-books, online
+          courses, or webinars. This not only allows you to monetize your
+          expertise but also provides valuable resources for others. Making
+          money online has become increasingly accessible with the evolution of
+          the digital landscape. One lucrative avenue is through freelance work.
+          Websites like Upwork, Fiverr, and Freelancer connect skilled
+          individuals with clients seeking services such as writing, graphic
+          design, programming, and more. By showcasing your expertise and
+          delivering quality work, you can build a solid reputation and attract
+          a steady stream of clients, allowing you to earn money on a flexible
+          <br />
+          Another avenue for online income is through creating and selling
+          digital products. If you possess a talent for graphic design, you can
+          design and sell custom illustrations, logos, or templates on platforms
+          like Etsy or Gumroad. Alternatively, if you have knowledge in a
+          particular field, consider creating and selling e-books, online
+          courses, or webinars. This not only allows you to monetize your
+          expertise but also provides valuable resources for others.</textarea
+              >
+            </div>
+
+            <div class="form-control">
+              <h4>Image</h4>
+              <input type="file" name="" id="" />
+            </div>
+            <button class="update">
+              <i class="fa fa-save"> </i> Save Changes
+            </button>
+            <button class="delete">
+              <i class="fa fa-trash"> </i> Delete Post
+            </button>
+          </form>
+        </div>
+      </section>
+      <hr />
+      <section class="messages">
+        <div class="section-container">
+          <h1 class="section-title">Mess<span>ages</span></h1>
+           <div style="overflow-x: auto" class="table-container">
+            <table>
+              <tr>
+                <th>No</th>
+                <th>Sender</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Message</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>
+                    johndoe@mail.com
+                </td>
+                <td>
+                  078855555
+                </td>
+                <td>
+                 Hello, I have a job for you!
+                </td>
+              </tr>
+             
+              <tr>
+                <td>2</td>
+                <td>John Doe</td>
+                <td>
+                    johndoe@mail.com
+                </td>
+                <td>
+                  078855555
+                </td>
+                <td>
+                 Hello, I have a job for you!
+                </td>
+              </tr>
+              
+              <tr>
+                <td>3</td>
+                <td>John Doe</td>
+                <td>
+                    johndoe@mail.com
+                </td>
+                <td>
+                  078855555
+                </td>
+                <td>
+                 Hello, I have a job for you!
+                </td>
+              </tr>
+            </table>
+        </div>
+      </section>
+    </main>
+
+    <!-- back to top -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+    <!-- footer -->
+    <footer>
+      <p>All Rights Reserved. Eliezer Nsengi &copy;, 2024</p>
+    </footer>
+    <script src="./index.js"></script>
+
+    <script src="./admin.js"></script>
+    <script src="./form-validation.js"></script>
+  </body>
+</html>

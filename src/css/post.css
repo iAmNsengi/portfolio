@@ -1,0 +1,114 @@
+* {
+  color: white;
+}
+section {
+  font-size: calc(10px + 6 * ((100vw - 480px) / 980));
+}
+.post-title {
+  margin-top: 150px;
+  margin-left: 5%;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.image-container {
+  margin-left: 5%;
+  margin-top: 50px;
+  width: 70vw;
+  height: 300px;
+  overflow: hidden;
+}
+.image-container .img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.post .content p {
+  max-width: 70vw;
+  margin-left: 5%;
+  text-align: center;
+  padding-block: 50px;
+}
+
+.post .title-2 {
+  margin-left: 5%;
+  padding-block: 30px;
+}
+.other-posts {
+  margin-left: 5%;
+  max-width: 700px;
+  overflow: hidden;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+.other-posts .card {
+  width: 310px;
+  height: 200px;
+  margin: 10px;
+
+  /* overflow: hidden; */
+}
+.other-posts .card img {
+  width: 100%;
+  height: 100%;
+}
+.other-posts .card .other-posts--title {
+  text-align: center;
+}
+.comment {
+  width: 50%;
+  background: #070216;
+  padding: 25px;
+  margin-top: 20px;
+  margin-left: 5%;
+  border: 1px solid #18c9f0;
+  border-radius: 5px;
+}
+.comment .comment-title {
+  padding-block: 10px;
+}
+.comment form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.comment form input {
+  padding: 10px;
+  width: 100%;
+  background-color: #0b0229;
+  margin: 20px 0;
+  outline: none;
+  border: none;
+}
+.comment form textarea {
+  padding: 10px;
+  background-color: #0b0229;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+.comment form button {
+  margin-top: 15px;
+  color: black;
+}
+.comment form button i {
+  color: black;
+}
+.comment form button:hover {
+  color: white;
+}
+.comment form button:hover i {
+  color: white;
+}
+form input.error {
+  border: 2px solid red;
+}
+form textarea.error {
+  border: 2px solid red;
+}
+@media only screen and (max-width: 980px) {
+  .comment {
+    width: 90%;
+  }
+}

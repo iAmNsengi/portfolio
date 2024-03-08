@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="./src/dumb_face.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="post.css" />
+    <title>iAmNsengi</title>
+  </head>
+  <body>
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+    <header class="header">
+      <nav class="navbar">
+        <a href="/" class="nav-logo">iAmNsengi.</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="/" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about-me" class="nav-link">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a href="#portfolio" class="nav-link">PORTFOLIO</a>
+          </li>
+          <li class="nav-item">
+            <a href="#my-blog" class="nav-link">MY BLOG</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact-me" class="nav-link">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-primary fw-600">
+              <i class="fa fa-envelope"></i> HIRE ME
+            </button>
+          </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <section class="container mb-3 post">
+      <div class="post-title">
+        <h1>How To Make Money Online</h1>
+        <p><i>Eliezer Nsengi 16-Jan-2024</i></p>
+      </div>
+      <div class="image-container">
+        <img src="src/img1.jpg" class="img" alt="" srcset="" />
+      </div>
+      <div class="content">
+        <p>
+          Making money online has become increasingly accessible with the
+          evolution of the digital landscape. One lucrative avenue is through
+          freelance work. Websites like Upwork, Fiverr, and Freelancer connect
+          skilled individuals with clients seeking services such as writing,
+          graphic design, programming, and more. By showcasing your expertise
+          and delivering quality work, you can build a solid reputation and
+          attract a steady stream of clients, allowing you to earn money on a
+          flexible Another avenue for online income is through creating and
+          selling digital products. If you possess a talent for graphic design,
+          you can design and sell custom illustrations, logos, or templates on
+          platforms like Etsy or Gumroad. Alternatively, if you have knowledge
+          in a particular field, consider creating and selling e-books, online
+          courses, or webinars. This not only allows you to monetize your
+          expertise but also provides valuable resources for others. Making
+          money online has become increasingly accessible with the evolution of
+          the digital landscape. One lucrative avenue is through freelance work.
+          Websites like Upwork, Fiverr, and Freelancer connect skilled
+          individuals with clients seeking services such as writing, graphic
+          design, programming, and more. By showcasing your expertise and
+          delivering quality work, you can build a solid reputation and attract
+          a steady stream of clients, allowing you to earn money on a flexible
+          <br />
+          Another avenue for online income is through creating and selling
+          digital products. If you possess a talent for graphic design, you can
+          design and sell custom illustrations, logos, or templates on platforms
+          like Etsy or Gumroad. Alternatively, if you have knowledge in a
+          particular field, consider creating and selling e-books, online
+          courses, or webinars. This not only allows you to monetize your
+          expertise but also provides valuable resources for others.
+        </p>
+      </div>
+      <h3 class="title-2">You can also be interested:</h3>
+      <div class="other-posts row">
+        <div class="card">
+          <img src="./src/img2.png" alt="" srcset="" />
+          <p class="other-posts--title">Implementing ES6</p>
+        </div>
+        <div class="card">
+          <img src="./src/img3.jpg" alt="" srcset="" />
+          <p class="other-posts--title">Making a camera</p>
+        </div>
+      </div>
+      <div class="comment">
+        <h3 class="comment-title">Leave A Comment</h3>
+        <form action="#" id="comment-form">
+          <input
+            type="text"
+            placeholder="email..."
+            id="comment-input-email"
+            oninput="validateEmail(this)"
+          />
+          <textarea
+            cols="30"
+            rows="7"
+            placeholder="Comment..."
+            id="comment-input-comment"
+            oninput="validateInput(this)"
+          ></textarea>
+          <button class="btn btn-primary">
+            <i class="fa fa-send"></i> Send Comment
+          </button>
+        </form>
+      </div>
+    </section>
+    <script t src="./src/blog.js"></script>
+    <script src="./index.js"></script>
+    <footer>
+      <p>All Rights Reserved. Eliezer Nsengi &copy;, 2024</p>
+    </footer>
+  </body>
+</html>
