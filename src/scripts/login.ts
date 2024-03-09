@@ -26,37 +26,8 @@ if (login_form && username && password && error_msg && error_box) {
     }
     if (!containsError) {
       let users: string | null = localStorage.getItem("user");
-      if (!users) {
-        localStorage.setItem(
-          "user",
-          JSON.stringify({ username: "admin", password: "password" })
-        );
-      }
-      users = localStorage.getItem("user");
-
-      const usernameMatch =
-        typeof users === "string"
-          ? users.match(/(?<="username":")([^"]+)/)
-          : null;
-      const passwordMatch =
-        typeof users === "string"
-          ? users.match(/(?<="password":")([^"]+)/)
-          : null;
-
-      const usernameMatched: boolean =
-        usernameMatch && usernameMatch[0] === username.value;
-      const passwordMatched: boolean =
-        passwordMatch && passwordMatch[0] === password.value;
-
-      if (usernameMatched && passwordMatched) {
-        login_form.reset();
-        error_box.style.display = "none";
-        localStorage.setItem("is-authenticated", "true");
-        window.location.href = "admin.html";
-      } else {
-        error_box.style.display = "block";
-        error_msg.innerHTML = "User Not Found!";
-      }
+  
+      
     }
   });
 

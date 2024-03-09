@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./src/css/index.css" />
     <link rel="stylesheet" href="./src/css/login.css" />
     <script src="./src/scripts/index.js"></script>
-    <title>Login | iAmNsengi</title>
+    <title>SignUp | iAmNsengi</title>
   </head>
   <body>
     <div class="bubble bubble--1"></div>
@@ -35,7 +35,7 @@
     <section class="login">
       <div class="login-container">
         <h1 class="section-title">
-          SIGN<span class="text-primary">IN</span> TO YOUR ACC<span
+          CRE<span class="text-primary">ATE</span> AN ACC<span
             class="text-primary"
             >OUNT</span
           >
@@ -56,18 +56,18 @@
             placeholder="Password..."
             name="password"
             id="password"
-            oninput="validateInput(this)"
+            oninput="validatePassword(this)"
           /><br />
           <p>
-            Don't have an account? <u><a href="./signup.html"> SignUp </a></u>
+            Already have an account? <u> <a href="./login.html"> Login </a> </u>
           </p>
-          <button class="btn" type="submit">
-            <i class="fa fa-sign-in"></i> &nbsp;LOGIN
+          <button class="btn" type="submit" id="submit-btn">
+            <i class="fa fa-sign-in"></i> &nbsp;Sign Up
           </button>
         </form>
       </div>
     </section>
-    <script src="./src/scripts/login.js"></script>
+    <script src="./src/scripts/signup.js"></script>
     <script src="./src/scripts/form-validation.js"></script>
   </body>
 </html>
