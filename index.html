@@ -83,7 +83,6 @@
             <div class="social-icons"> 
               <a href="https://www.linkedin.com/in/eliezer-nsengi-6530b0285/" target="_blank">
                 <i class="fa fa-linkedin"></i>
-
               </a>
               <a href="https://www.instagram.com/avaran_nsengi" target="_blank">
                 <i class="fa fa-instagram"></i>
@@ -287,10 +286,10 @@ Passionate about  Python Development and  ready to work under pressure, enjoys l
         <h1 class="title section-title">CONTACT <span class="text-primary">ME</span></h1>
       <div class="form-container">
         <form id="contact-form">
-            <input type="text" oninput="validateInput(this)" placeholder="full name..." id="contact-name" name="contact-name"><br>
-            <input type="text" placeholder="email..." id="contact-email" name="contact-email" oninput="validateEmail(this)"><br>
-            <input type="text" placeholder="phone number..." id="contact-phone" oninput="validateInput(this)" name="contact-phone"><br>
-<textarea  oninput="validateInput(this)" cols="40" rows="8" placeholder="Your Message..." name="contact_message" id="contact-message"></textarea>
+            <input type="text" required oninput="validateInput(this)" placeholder="full name..." id="contact-name" name="contact-name"><br>
+            <input type="email" required placeholder="email..." id="contact-email" name="contact-email" oninput="validateEmail(this)"><br> 
+            <input type="text"required placeholder="phone number..." id="contact-phone" oninput="validateInput(this)" name="contact-phone"><br>
+<textarea required  oninput="validateInput(this)" cols="40" rows="8" placeholder="Your Message..." name="contact_message" id="contact-message"></textarea>
 <button class="btn btn-primary"><i class="fa fa-send"></i> SEND MESSAGE</button>
 </div>
         </form>
@@ -300,11 +299,11 @@ Passionate about  Python Development and  ready to work under pressure, enjoys l
 <!-- back to top -->
    <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fa fa-arrow-up"></i></button>
     <!-- footer -->
-     <footer>
+    <footer>
       <p>All Rights Reserved. Eliezer Nsengi &copy;, 2024</p>
     </footer>
+    <script src="./src/scripts/form-validation.js"></script>
     <script src="./src/scripts/index.js"></script>
     <script src="./src/scripts/contact.js"></script>
-    <script src="./src/scripts/form-validation.js"></script>
   </body>
 </html>
