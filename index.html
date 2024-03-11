@@ -285,10 +285,13 @@ Passionate about  Python Development and  ready to work under pressure, enjoys l
 
         <h1 class="title section-title">CONTACT <span class="text-primary">ME</span></h1>
       <div class="form-container">
+         <div class="error-box">
+          <p class="error-msg">{message here}</p>
+        </div>
         <form id="contact-form">
-            <input type="text" required oninput="validateInput(this)" placeholder="full name..." id="contact-name" name="contact-name"><br>
-            <input type="email" required placeholder="email..." id="contact-email" name="contact-email" oninput="validateEmail(this)"><br> 
-            <input type="text"required placeholder="phone number..." id="contact-phone" oninput="validateInput(this)" name="contact-phone"><br>
+            <input type="text" required oninput="validateInput(this)" placeholder="full name..." id="contact-name" name="contact_name"><br>
+            <input type="email" required placeholder="email..." id="contact-email" name="contact_email" oninput="validateEmail(this)"><br> 
+            <input type="text"required placeholder="phone number..." id="contact-phone" oninput="validateInput(this)" name="contact_phone"><br>
 <textarea required  oninput="validateInput(this)" cols="40" rows="8" placeholder="Your Message..." name="contact_message" id="contact-message"></textarea>
 <button class="btn btn-primary"><i class="fa fa-send"></i> SEND MESSAGE</button>
 </div>

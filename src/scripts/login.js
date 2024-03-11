@@ -45,8 +45,9 @@ if (login_form && username && password && error_msg && error_box) {
           const data = await response.json();
           console.log(data.token);
           const token = data.token;
-
+          window.location.replace("./admin.html");
           // Store token in localStorage or sessionStorage
+          localStorage.setItem("token", "");
           localStorage.setItem("token", token);
         }
       } catch (error) {
@@ -57,17 +58,4 @@ if (login_form && username && password && error_msg && error_box) {
       }
     }
   });
-
-  function validateInput(x) {
-    if (error_box) error_box.style.display = "none";
-    if (x.value === "") {
-      x.classList.add("error");
-      containsError = true; // 'containsError' is not defined here, maybe i should pass it as a parameter
-    }
-    if (x.value !== "") {
-      x.classList.remove("error");
-      containsError = false;
-      // 'containsError' is not defined here too maybe i should declare it as a parameter
-    }
-  }
 }

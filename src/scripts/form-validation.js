@@ -1,5 +1,4 @@
 "use strict";
-let contact_form = document.getElementById("contact-form");
 let contact_name = document.getElementById("contact-name");
 let contact_email = document.getElementById("contact-email");
 let contact_phone = document.getElementById("contact-phone");

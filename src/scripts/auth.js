@@ -9,7 +9,7 @@ try {
       Authorization: "Bearer " + token,
     },
   }).then((response) => {
-    if (response.status == 401) window.location.href = "login.html";
+    if (response.status == 401) window.locationr.replace("login.html");
     if (response.status == 200) {
       body.style.display = "block";
     }

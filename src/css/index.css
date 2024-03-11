@@ -19,6 +19,16 @@ body {
     font-size: 30px;
   }
 }
+.error-box {
+  display: none;
+  border: 2px solid red;
+  padding: 5px;
+}
+.error-msg {
+  font-size: 13px;
+  color: red;
+  text-align: center;
+}
 input {
   color: white !important;
 }
