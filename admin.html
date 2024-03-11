@@ -68,13 +68,13 @@
         <div class="dashboard">
           <div class="card-container">
             <div class="card">
-              <p class="title"><i class="fa fa-envelope"></i> 123 Messages</p>
+              <p class="title messages-count"><i class="fa fa-envelope"></i>{} Messages</p>
             </div>
             <div class="card">
-              <p class="title"><i class="fa fa-sticky-note"></i> 13 Posts</p>
+              <p class="title posts-count"><i class="fa fa-sticky-note"></i> {} Posts</p>
             </div>
             <div class="card">
-              <p class="title"><i class="fa fa-eye"></i> 19 Visis</p>
+              <p class="title projects-count"><i class="fa fa-eye"></i> { } Projects</p>
             </div>
           </div>
         </div>
@@ -134,69 +134,37 @@ Passionate about  Python Development and  ready to work under pressure, enjoys l
       <section class="section-3">
         <div class="section-container">
           <h1 class="section-title">Recent Pro<span>jects</span></h1>
-          <form action="#" class="projects">
+          <form method="POST" enctype="multipart/form-data" class="projects" id="projectForm">
             <div style="overflow-x: auto" class="table-container">
               <table>
                 <tr>
                   <th>No</th>
                   <th>Project Name</th>
                   <th>Project URL</th>
+                  <th>Project Description</th>
                   <th>Project Image</th>
                   <th>Action</th>
                 </tr>
                 <tr>
                   <td>&nbsp</td>
-                  <td><input type="text" placeholder="project name...." /></td>
-                  <td><input type="url" placeholder="https:/example.com" /></td>
-                  <td><input type="file" name="" id="" /></td>
+                  <td><input type="text" name="projectName" placeholder="project name...."  required/></td>
+                  <td><input type="url" name="projectLink" placeholder="https:/example.com" required /></td>
+                  <td><input type="text" name="projectDescription" placeholder="project description...."  required/></td>
+                  <td><input type="file" name="projectImage" required/></td>
                   <td>
                     <button class="btn-add">
                       <i class="fa fa-plus"></i> Add
                     </button>
                   </td>
                 </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Online Store</td>
-                  <td><a href="#">https:/store.store.com</a></td>
-                  <td>
-                    <div class="img-container">
-                      <img src="./src/img1.jpg" alt="" srcset="" />
-                    </div>
-                  </td>
-                  <td>
-                    <button class="delete"><i class="fa fa-trash"></i></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Online Store</td>
-                  <td><a href="#">https:/store.store.com</a></td>
-                  <td>
-                    <div class="img-container">
-                      <img src="./src/img1.jpg" alt="" srcset="" />
-                    </div>
-                  </td>
-                  <td>
-                    <button class="delete"><i class="fa fa-trash"></i></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Online Store</td>
-                  <td><a href="#">https:/store.store.com</a></td>
-                  <td>
-                    <div class="img-container">
-                      <img src="./src/img1.jpg" alt="" srcset="" />
-                    </div>
-                  </td>
-                  <td>
-                    <button class="delete"><i class="fa fa-trash"></i></button>
-                  </td>
-                </tr>
+          </form>                
+                <tbody id="projects-table">
+               <tr class="error-box">
+                  <td colspan="5" class="error-msg"> An UnExpected Error Occured, While Loading Data Try Again Later....</td>
+               </tr>
+              </tbody>
               </table>
             </div>
-          </form>
         </div>
       </section>
       <hr />
@@ -377,6 +345,7 @@ Making money online has become increasingly accessible with the
                 <th>Email</th>
                 <th>Phone Number</th>
                 <th>Message</th>
+                <th>Actions</th>
               </tr>
               </thead>
               <tbody id="messages-table">

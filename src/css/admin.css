@@ -490,3 +490,7 @@ footer p {
   text-decoration: none;
   cursor: pointer;
 }
+
+input[type="text"] {
+  color: black !important;
+}
