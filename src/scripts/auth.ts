@@ -1,8 +1,23 @@
-let criteria: string | null = localStorage.getItem("is-authenticated");
-if (!criteria) localStorage.setItem("is-authenticated", "false");
-criteria = localStorage.getItem("is-authenticated");
+"use strict";
 
-console.log(criteria);
-if (criteria === "false") {
-  window.location.href = "login.html";
+let token: string | null = localStorage.getItem("token");
+const body: HTMLBodyElement = document.getElementsByTagName("body")[0];
+
+try {
+  fetch("https://nsengi.onrender.com/api/v1/messages", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
+    },
+  }).then((response: Response) => {
+    if (response.status == 401) {
+      window.location.replace("login.html");
+    }
+    if (response.status == 200) {
+      body.style.display = "block";
+    }
+  });
+} catch (error) {
+  console.log(error);
 }

@@ -758,7 +758,7 @@ img:hover {
   width: 100%;
   height: 100%;
 }
-.projects-container .card button {
+.projects-container .card a {
   margin-left: 30%;
   padding: 10px 30px;
   color: black;
@@ -766,7 +766,7 @@ img:hover {
   border: 1px solid #18c9f0;
   background: var(--primary-color);
 }
-.projects-container .card button:hover {
+.projects-container .card a:hover {
   background: none;
   color: white;
   cursor: pointer;

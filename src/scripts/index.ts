@@ -1,47 +1,52 @@
-const hamburger: Element | null = document.querySelector(".hamburger");
-const navMenu: Element | null = document.querySelector(".nav-menu");
+"use strict";
 
+const projects = document.getElementById(
+  "projects-container"
+) as HTMLElement | null;
+const blogs = document.getElementById("blogs-container") as HTMLElement | null;
+
+const hamburger = document.querySelector(".hamburger") as HTMLElement | null;
+const navMenu = document.querySelector(".nav-menu") as HTMLElement | null;
 if (hamburger && navMenu) {
   hamburger.addEventListener("click", mobileMenu);
 }
 
-function mobileMenu(): void {
-  if (hamburger instanceof Element && navMenu instanceof Element) {
+function mobileMenu() {
+  if (hamburger && navMenu) {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
   }
 }
 
-const navLink: NodeListOf<Element> = document.querySelectorAll(".nav-link");
+const navLink = document.querySelectorAll(
+  ".nav-link"
+) as NodeListOf<HTMLElement>;
+navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
-navLink.forEach((n: Element) => n.addEventListener("click", closeMenu));
-
-function closeMenu(): void {
-  if (hamburger instanceof Element && navMenu instanceof Element) {
+function closeMenu() {
+  if (hamburger && navMenu) {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
   }
 }
 
-const dynamicText: Element | null = document.querySelector(".whoAmI");
-const words: string[] = [
+const dynamicText = document.querySelector(".whoAmI") as HTMLElement | null;
+const words = [
   "Python Developer",
   "React.Js Developer",
   "Django Developer",
   "Piano Player",
 ];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-let wordIndex: number = 0;
-let charIndex: number = 0;
-let isDeleting: boolean = false;
-
-const typeEffect = (): void => {
-  if (dynamicText instanceof Element) {
-    const currentWord: string = words[wordIndex];
-    const currentChar: string = currentWord.substring(0, charIndex);
+const typeEffect = () => {
+  if (dynamicText) {
+    const currentWord = words[wordIndex];
+    const currentChar = currentWord.substring(0, charIndex);
     dynamicText.textContent = currentChar;
     dynamicText.classList.add("stop-blinking");
-
     if (!isDeleting && charIndex < currentWord.length) {
       charIndex++;
       setTimeout(typeEffect, 200);
@@ -63,22 +68,25 @@ window.onscroll = function () {
   scrollFunction();
 };
 
-let slideIndex: number = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSlides(n: number): void {
+function plusSlides(n: number) {
   showSlides((slideIndex += n));
 }
 
-function currentSlide(n: number): void {
+function currentSlide(n: number) {
   showSlides((slideIndex = n));
 }
 
-function showSlides(n: number): void {
+function showSlides(n: number) {
   let i: number;
-  let slides: HTMLCollectionOf<Element> =
-    document.getElementsByClassName("mySlides");
-  let dots: HTMLCollectionOf<Element> = document.getElementsByClassName("dot");
+  let slides = document.getElementsByClassName(
+    "mySlides"
+  ) as HTMLCollectionOf<HTMLElement>;
+  let dots = document.getElementsByClassName(
+    "dot"
+  ) as HTMLCollectionOf<HTMLElement>;
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -86,61 +94,54 @@ function showSlides(n: number): void {
     slideIndex = slides.length;
   }
   for (i = 0; i < slides.length; i++) {
-    if (slides[i] instanceof HTMLElement) {
-      (slides[i] as HTMLElement).style.display = "none";
+    if (slides[i]) {
+      slides[i].style.display = "none";
     }
   }
   for (i = 0; i < dots.length; i++) {
-    if (dots[i] instanceof HTMLElement) {
-      (dots[i] as HTMLElement).className = (
-        dots[i] as HTMLElement
-      ).className.replace(" active", "");
+    if (dots[i]) {
+      dots[i].className = dots[i].className.replace(" active", "");
     }
   }
-  if (
-    slides[slideIndex - 1] instanceof HTMLElement &&
-    dots[slideIndex - 1] instanceof HTMLElement
-  ) {
-    (slides[slideIndex - 1] as HTMLElement).style.display = "flex";
-    (dots[slideIndex - 1] as HTMLElement).className += " active";
+  if (slides[slideIndex - 1] && dots[slideIndex - 1]) {
+    slides[slideIndex - 1].style.display = "flex";
+    dots[slideIndex - 1].className += " active";
   }
 }
 
-let mybutton: HTMLElement | null = document.getElementById("myBtn");
-
+let mybutton = document.getElementById("myBtn");
 window.onscroll = function () {
   scrollFunction();
 };
 
-function scrollFunction(): void {
-  let winScroll: number =
-    document.body.scrollTop || document.documentElement.scrollTop;
-  let height: number =
+function scrollFunction() {
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height =
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
-  let scrolled: number = (winScroll / height) * 100;
-  let myBar: HTMLElement | null = document.getElementById("myBar");
+  let scrolled = (winScroll / height) * 100;
+  let myBar = document.getElementById("myBar");
   if (myBar) {
     myBar.style.width = scrolled + "%";
   }
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    if (mybutton instanceof HTMLElement) {
+    if (mybutton) {
       mybutton.style.display = "block";
     }
   } else {
-    if (mybutton instanceof HTMLElement) {
+    if (mybutton) {
       mybutton.style.display = "none";
     }
   }
 }
 
-function topFunction(): void {
+function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
 
-function isInViewport(element: Element): boolean {
-  let rect: DOMRect = element.getBoundingClientRect();
+function isInViewport(element: HTMLElement) {
+  let rect = element.getBoundingClientRect();
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
@@ -149,3 +150,60 @@ function isInViewport(element: Element): boolean {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
+
+document.addEventListener("DOMContentLoaded", async (e) => {
+  const response = await fetch("https://nsengi.onrender.com/api/v1/projects", {
+    headers: {
+      Accept: "*/*",
+    },
+  }).catch((err) => {
+    console.log(err);
+    return;
+  });
+
+  if (response && response.status === 200 && projects) {
+    const data = await response.text();
+    const jsonData = JSON.parse(data);
+
+    //  putting data in the table
+    let rows = "";
+    jsonData.projects.forEach((item: any) => {
+      rows += `
+        <div class="card">
+          <img src="https://nsengi.onrender.com/${item.image}" alt="">
+          <a href="${item.link}" target="_blank" class="btn btn-primary">VIEW</a>
+          <p class="small-text">${item.title}</p>
+        </div>
+      `;
+    });
+    projects.innerHTML = rows;
+  }
+});
+
+document.addEventListener("DOMContentLoaded", async (e) => {
+  const response = await fetch("https://nsengi.onrender.com/api/v1/blogs", {
+    headers: {
+      Accept: "*/*",
+    },
+  }).catch((err) => {
+    console.log(err);
+    return;
+  });
+
+  if (response && response.status === 200 && blogs) {
+    const data = await response.text();
+    const jsonData = JSON.parse(data);
+
+    //  putting data in the table
+    let rows = "";
+    jsonData.blogs.forEach((item: any) => {
+      rows += `
+        <div class="slide">
+          <img src="https://nsengi.onrender.com/${item.blogImage}" >
+          <div class="text">${item.title}</div>
+        </div>
+      `;
+    });
+    blogs.innerHTML = rows;
+  }
+});

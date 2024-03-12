@@ -11,5 +11,8 @@
   "devDependencies": {
     "axios": "^1.6.7",
     "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "froala-editor": "^4.1.4"
   }
 }
